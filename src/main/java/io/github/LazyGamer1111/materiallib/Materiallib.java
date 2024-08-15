@@ -17,11 +17,9 @@ public class Materiallib implements ModInitializer {
     public static final String MOD_ID = "materiallib";
     public static final Logger LOGGER = Logger.getLogger(MOD_ID);
 
-    Material material = new Material(AbstractBlock.Settings.copy(Blocks.STONE), new Item.Settings(), "test", "test2", 300, 1f, 0xfcba03, 12);
 
     @Override
     public void onInitialize() {
-        materialRegistry.register(material);
     }
 
     public static void lateInit(){
