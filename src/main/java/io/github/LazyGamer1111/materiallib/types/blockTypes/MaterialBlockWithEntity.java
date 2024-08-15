@@ -7,8 +7,8 @@ import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.Nullable;
 
 public class MaterialBlockWithEntity extends MaterialBlock implements BlockEntityProvider {
-    public MaterialBlockWithEntity(Settings settings, String name, String parentModel) {
-        super(settings, name, parentModel);
+    public MaterialBlockWithEntity(Settings settings, String name, String langName, String parentModel) {
+        super(settings, name, langName, parentModel);
     }
 
     @Override

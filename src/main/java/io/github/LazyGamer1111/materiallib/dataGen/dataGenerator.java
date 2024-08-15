@@ -18,6 +18,7 @@ public class dataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(oreRecipeGen::new);
         pack.addProvider(genModels::new);
         pack.addProvider(ModWorldGenerator::new);
+        pack.addProvider(LangProvider::new);
     }
 
     @Override

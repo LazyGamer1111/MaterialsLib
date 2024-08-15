@@ -10,11 +10,13 @@ import net.minecraft.util.Identifier;
 
 public class MaterialBlock extends Block {
     public final String name;
+    public final String langName;
     public final String parentModel;
 
-    public MaterialBlock(Settings settings, String name, String parentModel) {
+    public MaterialBlock(Settings settings, String name, String langName, String parentModel) {
         super(settings);
         this.name = name;
+        this.langName = langName;
         this.parentModel = parentModel;
     }
 

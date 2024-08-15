@@ -23,6 +23,7 @@ public class Material {
     public final AbstractBlock.Settings blockSettings;
     public final Item.Settings itemSettings;
     public final String name;
+    public final String langName;
 
     // ═══════════════════════════════ Smelt Properties ════════════════════════════════
     public final int cookTime;
@@ -35,13 +36,14 @@ public class Material {
     public final int hexColor;
 
     // Implements basic ore blocks, full blocks, raw ingot and ingots.
-    public Material(AbstractBlock.Settings blockSettings, Item.Settings itemSettings, String name, int cookTime, float smeltExp, int hexColor, int veinSize) {
-        this.fullBlock = new FullBlock(blockSettings, name);
-        this.oreDeepslate = new OreBlock(blockSettings, name, OreBlock.BlockTypes.DEEPSLATE);
-        this.oreStone = new OreBlock(blockSettings, name, OreBlock.BlockTypes.STONE);
-        this.rawIngot = new RawIngot(itemSettings, name, "raw_ingot");
-        this.ingot = new IngotItem(itemSettings, name, "ingot");
+    public Material(AbstractBlock.Settings blockSettings, Item.Settings itemSettings, String name, String langName, int cookTime, float smeltExp, int hexColor, int veinSize) {
+        this.fullBlock = new FullBlock(blockSettings, name, langName);
+        this.oreDeepslate = new OreBlock(blockSettings, name, langName, OreBlock.BlockTypes.DEEPSLATE);
+        this.oreStone = new OreBlock(blockSettings, name, langName, OreBlock.BlockTypes.STONE);
+        this.rawIngot = new RawIngot(itemSettings, name, langName, "raw_ingot");
+        this.ingot = new IngotItem(itemSettings, name, langName, "ingot");
         this.name = name;
+        this.langName = langName;
 
         this.blockSettings = blockSettings;
         this.itemSettings = itemSettings;
