@@ -10,6 +10,9 @@
   "icon": "assets/materiallib/icon.png",
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": [
+      "io.github.LazyGamer1111.materiallib.dataGen.dataGenerator"
+    ],
     "client": [
       "io.github.LazyGamer1111.materiallib.client.MateriallibClient"
     ],
